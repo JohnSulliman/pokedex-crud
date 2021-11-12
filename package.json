@@ -1,0 +1,27 @@
+{
+  "name": "pokedex-crud",
+  "version": "1.0.0",
+  "description": "Projeto CRUD para o módulo 2 da Blue Edtech",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JohnSulliman/pokedex-crud.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JohnSulliman/pokedex-crud/issues"
+  },
+  "homepage": "https://github.com/JohnSulliman/pokedex-crud#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}

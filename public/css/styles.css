@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background-color: #E0E0E0;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.head {
+    background-color: #383838;
+    min-height: 75px;
+    background-image: url('../img/logo.webp');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200px;
+}
+
+.menu {
+    background-color: #383838;
+    min-height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+}
+
+.menuHome {
+    min-width: 80px;
+    padding: 5px;
+    border: 3px solid #383838;
+}
+
+.menuHome:hover {
+    border-bottom: 3px solid #BC3232;
+    cursor: pointer;
+}
+
+.menuRegister {
+    min-width: 80px;
+    padding: 5px;
+    border: 3px solid #383838;
+}
+
+.menuRegister:hover {
+    border-bottom: 3px solid #BC3232;
+    cursor: pointer;
+}
+
+.body {
+    min-height: 75vh;
+}
