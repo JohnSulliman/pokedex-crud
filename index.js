@@ -160,11 +160,11 @@ app.post("/sent", (req, res) => {
 })
 
 app.get("/detalhes", (req, res) => {
-  res.render("detalhes")
+  res.render("infos")
 });
 
 app.get("/detalhes/:number", (req, res) => {
-  res.render("detalhes", {pokemons: pokemon.filter(i => i.number === req.params.number), number: req.params.number});
+  res.render("infos", {pokemons: pokemon.filter(i => i.number === req.params.number), number: req.params.number});
 });
 
 app.listen ( port, () => 

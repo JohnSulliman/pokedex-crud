@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css" >
+    <title>Pokedéx/Detalhes</title>
+</head>
+
+<body>
+    <header class='head'>
+
+    </header>
+
+    <nav class='menu'>
+        <a href='/' class='menuHome'>
+            <div>
+                <img src='../img/pokeball.png' width='30px' />
+                <p>VOLTAR</p>
+            </div>
+        </a>
+    </nav>
+
+    <main class='body'>
+        <div class='body-infos'>
+            <% pokemons.map( pokemon => { %>
+                <h3>
+                    <%= pokemon.name %>
+                </h3>
+            <% }) %>
+            <section>
+                <% pokemons.map( pokemon => { %>
+                    <div>
+                        <img src="<%= pokemon.image%>" />
+                    </div>
+                    
+                    <div>
+                        <p><b>Nº :</b> <%=pokemon.number %></p>
+                        <% if(pokemon.type2 == '') { %>
+                            <p><b>Tipo</b>: <span id='<%=pokemon.type1 %>' ><%= pokemon.type1 %></span></p>
+                        <% } else { %>
+                            <p><b>Tipo</b>: <span id='<%=pokemon.type1 %>'><%= pokemon.type1 %></span> / <span id='<%=pokemon.type2 %>'><%= pokemon.type2 %></span></p>
+                        <% } %>
+                        <% if(pokemon.description == '') { %>
+                            <p><b>Descrição:</b> (Não especificado) </p>
+                        <% } else { %>
+                            <p><b>Descrição:</b> <%=pokemon.description %></p>
+                        <% } %>
+                        <% if(pokemon.height == '') { %>
+                            <p><b>Altura:</b> (Não especificado) </p>
+                        <% } else { %>
+                            <p><b>Altura:</b> <%=pokemon.height %> m</p>
+                        <% } %>
+                        <% if(pokemon.weight == '') { %>
+                            <p><b>Peso:</b> (Não especificado) </p>
+                        <% } else { %>
+                            <p><b>Peso:</b> <%=pokemon.weight %> kg</p>
+                        <% } %>
+                        <% if(pokemon.category == '') { %>
+                            <p><b>Categoria:</b> (Não especificado) </p>
+                        <% } else { %>
+                            <p><b>Categoria:</b> <%=pokemon.category %></p>
+                        <% } %>
+                        <% if(pokemon.abilities == '') { %>
+                            <p><b>Habilidade:</b> (Não especificado) </p>
+                        <% } else { %>
+                            <p><b>Habilidade:</b> <%=pokemon.abilities  %></p>
+                        <% } %>
+                    </div>
+                <% }) %>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <small>
+            ©2021 Pokémon. TM, ®Nintendo.
+        </small>
+    </footer>
+
+    <script src='/js/script.js'></script>
+
+</body>
+</html>
