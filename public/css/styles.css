@@ -1,128 +1,301 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html, body {
-    background-color: #E0E0E0;
-    text-align: center;
+  background-color: #E0E0E0;
+  text-align: center;
 }
 
 a {
-    text-decoration: none;
-    color: #000000;
+  text-decoration: none;
+  color: #000000;
 }
 
 .head {
-    background-color: #383838;
-    min-height: 75px;
-    background-image: url('../img/logo.webp');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 200px;
+  background-color: #383838;
+  min-height: 75px;
+  background-image: url('../img/logo.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 200px;
 }
 
 .menu {
-    background-color: #383838;
-    min-height: 60px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding-top: 5px;
+  background-color: #383838;
+  min-height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
 }
 
 .menuHome {
-    min-width: 80px;
-    padding: 5px;
-    border: 3px solid #383838;
+  min-width: 80px;
+  padding: 5px;
+  border: 3px solid #383838;
 }
 
 .menuHome:hover {
-    border-bottom: 3px solid #BC3232;
-    cursor: pointer;
+  border-bottom: 3px solid #BC3232;
+  cursor: pointer;
 }
 
 .menuRegister {
-    min-width: 80px;
-    padding: 5px;
-    border: 3px solid #383838;
+  min-width: 80px;
+  padding: 5px;
+  border: 3px solid #383838;
 }
 
 .menuRegister:hover {
-    border-bottom: 3px solid #BC3232;
-    cursor: pointer;
+  border-bottom: 3px solid #BC3232;
+  cursor: pointer;
 }
 
-.body {
-    min-height: 75vh;
-    display: flex;
-    justify-content: center;
+.register {
+  margin-top: 20px;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
-.body-home {
-    width: 90%;
-    margin-top: 10px;
-    padding: 10px;
-}
-
-.body-register {
-    width: 90%;
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 50px;
-    background-color: rgba(255,255,255,0.8);
-}
-
-.body-infos {
-    width: 90%;
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 50px;
-    background-color: rgba(255,255,255,0.8);
-}
-
-.card-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    margin: 5px;
-    padding: 5px;
-    transition: .3s;
-    border: 1px solid black;
-    border-radius: 20px;
-    background-color: rgba(255,255,255,0.8);
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card p {
-    margin: 5px;
+.register-infos {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .input {
-    margin: 10px;
-    width: 190px;
+  margin: 10px;
+  width: 185px;
 }
 
 .select {
-    margin: 10px;
-    width: 190px;
+  margin: 10px;
+  width: 190px;
+}
+
+.body {
+  min-height: 75vh;
+  display: flex;
+  justify-content: center;
+}
+
+.body-home {
+  width: 90%;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.body-register {
+  min-width: 40%;
+  margin-top: 25px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 50px;
+  background-color: rgba(255,255,255,0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.body-infos {
+  width: 90%;
+  margin-top: 25px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 50px;
+  background-color: rgba(255,255,255,0.8);
+}
+
+.card-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  padding: 5px;
+  transition: .3s;
+  border: 1px solid black;
+  border-radius: 20px;
+  background-color: rgba(255,255,255,0.7);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card p {
+  margin: 5px;
 }
 
 .registerButton {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.registerButton button{
+  background-color: #BC3232;
+  padding: 0.5rem;
+  border: 2px solid #383838;
+  color: #E0E0E0;
+  transition: .3s;
+}
+
+.registerButton button:hover {
+  cursor: pointer;
+  background-color: #8d1d1d;
+  transform: scale(1.05);
+}
+
+/* -----------------------------------------------Tipos--------------------------------------------------------- */
+
+#Inseto {
+  background-color: SeaGreen;
+  padding: 2px;
+  border: 1px solid Black;
+  border-radius: 5px;
+}
+  
+#Noturno {
+  background-color: DimGrey;
+  color: White;
+  padding: 2px;
+  border: 1px solid Black;
+  border-radius: 5px;
+}
+  
+#Dragão {
+  background: linear-gradient(rgba(0, 153, 204, 0.7), transparent);
+  background-color: IndianRed;
+  padding: 2px;
+  border: 1px solid Black;
+  border-radius: 5px;
+}
+  
+#Elétrico {
+  background-color: Gold;
+  padding: 2px;
+  border: 1px solid Black;
+  border-radius: 5px;
+}
+  
+#Fada {
+  background-color: LightPink;
+  color: Black;
+  padding: 2px;
+  border: 1px solid Black;
+  border-radius: 5px;
+}
+  
+#Lutador {
+  background-color: Chocolate;
+  color: Black;
+  padding: 2px;
+  border: 1px solid Black;
+  border-radius: 5px;
+}
+  
+#Fogo {
+  background-color: DarkOrange;
+  padding: 2px;
+  border: 1px solid Black;
+  border-radius: 5px;
+}
+  
+#Voador {
+  background: linear-gradient(rgba(0, 191, 255, 0.7), transparent);
+  background-color: DarkSlateBlue;
+  padding: 2px;
+  border: 1px solid Black;
+  border-radius: 5px;
+}
+  
+#Fantasma {
+  background-color: MediumPurple;
+  color: Black;
+  padding: 2px;
+  border: 1px solid Black;
+  border-radius: 5px;
+}
+  
+#Grama {
+  background-color: MediumSeaGreen;
+  padding: 2px;
+  border: 1px solid Black;
+  border-radius: 5px;
+}
+  
+#Terra {
+  background-color: DarkGoldenrod;
+  padding: 2px;
+  border: 1px solid Black;
+  border-radius: 5px;
+}
+  
+#Gelo {
+  background-color: LightSkyBlue;
+  padding: 2px;
+  border: 1px solid Black;
+  border-radius: 5px;
+}
+  
+#Normal {
+  background-color: PeachPuff;
+  color: Black;
+  padding: 2px;
+  border: 1px solid Black;
+  border-radius: 5px;
+}
+  
+#Venenoso {
+  background-color: DarkOrchid;
+  color: White;
+  padding: 2px;
+  border: 1px solid Black;
+  border-radius: 5px;
+}
+  
+#Psíquico {
+  background-color: Violet;
+  padding: 2px;
+  border: 1px solid Black;
+  border-radius: 5px;
+}
+  
+#Pedra {
+  background-color: SaddleBrown;
+  padding: 2px;
+  border: 1px solid Black;
+  border-radius: 5px;
+}
+  
+#Aço {
+  background-color: LightSlateGray;
+  color: Black;
+  padding: 2px;
+  border: 1px solid Black;
+  border-radius: 5px;
+}
+  
+#Água {
+  background-color: DodgerBlue;
+  padding: 2px;
+  border: 1px solid Black;
+  border-radius: 5px;
 }
