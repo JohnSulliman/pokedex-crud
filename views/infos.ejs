@@ -25,13 +25,10 @@
 
     <main class='body'>
         <div class='body-infos'>
-            <% pokemons.map( pokemon => { %>
                 <h3>
                     <%= pokemon.name %>
                 </h3>
-            <% }) %>
             <section>
-                <% pokemons.map( pokemon => { %>
                     <div>
                         <img src="<%= pokemon.image%>" />
                     </div>
@@ -63,13 +60,12 @@
                         <% } else { %>
                             <p><b>Categoria:</b> <%=pokemon.category %></p>
                         <% } %>
-                        <% if(pokemon.abilities == '') { %>
+                        <% if(pokemon.skills == '') { %>
                             <p><b>Habilidade:</b> (Não especificado) </p>
                         <% } else { %>
-                            <p><b>Habilidade:</b> <%=pokemon.abilities  %></p>
+                            <p><b>Habilidade:</b> <%=pokemon.skills  %></p>
                         <% } %>
                     </div>
-                <% }) %>
             </section>
         </div>
     </main>
