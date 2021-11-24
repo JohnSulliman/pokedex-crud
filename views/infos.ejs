@@ -25,49 +25,69 @@
 
     <main class='body'>
         <div class='body-infos'>
-                <h3>
-                    <%= pokemon.name %>
-                </h3>
-            <section>
-                    <div>
-                        <img src="<%= pokemon.image%>" />
-                    </div>
+            <h2>
+                <%= pokemon.name %>  
+            </h2>
+            <section class='infos'>
+                <div class='infos1'>
+                    <img src='<%= pokemon.image%>' width='400px' />
+                </div>
                     
-                    <div>
-                        <p><b>Nº :</b> <%=pokemon.number %></p>
-                        <% if(pokemon.type2 == '') { %>
-                            <p><b>Tipo</b>: <span id='<%=pokemon.type1 %>' ><%= pokemon.type1 %></span></p>
-                        <% } else { %>
-                            <p><b>Tipo</b>: <span id='<%=pokemon.type1 %>'><%= pokemon.type1 %></span> / <span id='<%=pokemon.type2 %>'><%= pokemon.type2 %></span></p>
-                        <% } %>
-                        <% if(pokemon.description == '') { %>
-                            <p><b>Descrição:</b> (Não especificado) </p>
-                        <% } else { %>
-                            <p><b>Descrição:</b> <%=pokemon.description %></p>
-                        <% } %>
-                        <% if(pokemon.height == '') { %>
-                            <p><b>Altura:</b> (Não especificado) </p>
-                        <% } else { %>
-                            <p><b>Altura:</b> <%=pokemon.height %> m</p>
-                        <% } %>
-                        <% if(pokemon.weight == '') { %>
-                            <p><b>Peso:</b> (Não especificado) </p>
-                        <% } else { %>
-                            <p><b>Peso:</b> <%=pokemon.weight %> kg</p>
-                        <% } %>
-                        <% if(pokemon.category == '') { %>
-                            <p><b>Categoria:</b> (Não especificado) </p>
-                        <% } else { %>
-                            <p><b>Categoria:</b> <%=pokemon.category %></p>
-                        <% } %>
-                        <% if(pokemon.skills == '') { %>
-                            <p><b>Habilidade:</b> (Não especificado) </p>
-                        <% } else { %>
-                            <p><b>Habilidade:</b> <%=pokemon.skills  %></p>
-                        <% } %>
-                        <a href="/deletar/<%= pokemon.number %>" >EXCLUIR</a>
-                        <a href="/update/<%= pokemon.number %>" >EDITAR</a>              
-                    </div>
+                <div class='infos2'>
+                    <p><b>Nº :</b> <%=pokemon.number %></p>
+                    <% if(pokemon.type2 == '') { %>
+                        <p><b>Tipo</b>: <span id='<%=pokemon.type1 %>' ><%= pokemon.type1 %></span></p>
+                    <% } else { %>
+                        <p><b>Tipo</b>: <span id='<%=pokemon.type1 %>'><%= pokemon.type1 %></span> / <span id='<%=pokemon.type2 %>'><%= pokemon.type2 %></span></p>
+                    <% } %>
+                    <% if(pokemon.description == '') { %>
+                        <p><b>Descrição:</b> (Não especificado) </p>
+                    <% } else { %>
+                        <p><b>Descrição:</b> <%=pokemon.description %></p>
+                    <% } %>
+                    <% if(pokemon.height == '') { %>
+                        <p><b>Altura:</b> (Não especificado) </p>
+                    <% } else { %>
+                        <p><b>Altura:</b> <%=pokemon.height %> m</p>
+                    <% } %>
+                    <% if(pokemon.weight == '') { %>
+                        <p><b>Peso:</b> (Não especificado) </p>
+                    <% } else { %>
+                        <p><b>Peso:</b> <%=pokemon.weight %> kg</p>
+                    <% } %>
+                    <% if(pokemon.sex == '') { %>
+                        <p><b>Sexo:</b> (Não especificado) </p>
+                    <% } else { %>
+                        <p><b>Sexo:</b> <%=pokemon.sex %></p>
+                    <% } %>
+                    <% if(pokemon.category == '') { %>
+                        <p><b>Categoria:</b> (Não especificado) </p>
+                    <% } else { %>
+                        <p><b>Categoria:</b> <%=pokemon.category %></p>
+                    <% } %>
+                    <% if(pokemon.skills == '') { %>
+                        <p><b>Habilidade:</b> (Não especificado) </p>
+                    <% } else { %>
+                        <p><b>Habilidade:</b> <%=pokemon.skills  %></p>
+                    <% } %>
+                    <% if(pokemon.strong == '') { %>
+                        <p><b>Forte:</b> (Não especificado) </p>
+                    <% } else { %>
+                        <p><b>Forte</b>: <span id='<%=pokemon.strong %>' ><%= pokemon.strong %></span></p>
+                    <% } %>
+                    <% if(pokemon.weak == '') { %>
+                        <p><b>Fraco:</b> (Não especificado) </p>
+                    <% } else { %>
+                        <p><b>Fraco</b>: <span id='<%=pokemon.weak%>' ><%= pokemon.weak %></span></p>
+                    <% } %>
+                </div>
+
+                <div class='infos3'>
+                    <% region.map (regions => { %>
+                        <h2><%= regions.region_name %></h2>
+                        <img src='<%= regions.region_image%>' alt='<%= regions.region_name %>' />
+                    <% }) %>
+                </div>
             </section>
         </div>
     </main>

@@ -97,6 +97,7 @@ a {
 .body-register {
   min-width: 40%;
   margin-top: 25px;
+  margin-bottom: 25px;
   padding: 10px;
   border: 1px solid black;
   border-radius: 50px;
@@ -109,10 +110,32 @@ a {
 .body-infos {
   width: 90%;
   margin-top: 25px;
+  margin-bottom: 25px;
   padding: 10px;
   border: 1px solid black;
   border-radius: 50px;
   background-color: rgba(255,255,255,0.8);
+}
+
+.infos {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.infos1 {
+  width: 400px;
+}
+
+.infos2 {
+  width: 50%;
+}
+
+.body-infos p {
+  padding: 0.5rem;
 }
 
 .card-list {
