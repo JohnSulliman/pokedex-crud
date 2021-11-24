@@ -7,7 +7,7 @@
 ![GitHub download count](https://img.shields.io/chocolatey/dt/pokedex-crud?style=flat)
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/JohnSulliman/pokedex-crud?style=flat)
 
-<img src="https://drive.google.com/uc?export=view&id=1wJNdAcqqIKeKRJFF8e0fPiSQ0rdp401e" alt="pokedex-mvc">
+<img src="https://drive.google.com/uc?export=view&id=1wJNdAcqqIKeKRJFF8e0fPiSQ0rdp401e" alt="pokedex-crud">
 
 > Projeto Pokedéx em CRUD -Feito para o módulo 2 da Blue-EdTech-.
 
