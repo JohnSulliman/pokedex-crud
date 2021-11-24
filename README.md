@@ -58,7 +58,7 @@ npm run dev
 ```
 E acesse o link <a href="http://localhost:3000/">localhost:3000</a>
 
-## ☕ Usando `Pokedex (CRUD)` localmente <img src="https://drive.google.com/uc?export=view&id=1fUe9dxafQHROqKddaZ6NQ0gi9PB2xnNn" width="110px" alt="glaceon.gif" >
+## ☕ Usando `Pokedex (CRUD)` localmente <img src="https://drive.google.com/uc?export=view&id=1fUe9dxafQHROqKddaZ6NQ0gi9PB2xnNn" width="120px" alt="glaceon.gif" >
 
 Para usar o projetro `Pokedex (CRUD)` localmente, você vai precisar de alguma ferramente de banco de dados. Para esse projeto, foi usado PostgresSQL.
 
