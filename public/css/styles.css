@@ -20,6 +20,21 @@ a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 200px;
+  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.githubImage {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  cursor: pointer;
+  padding: 1rem;
 }
 
 .menu {
