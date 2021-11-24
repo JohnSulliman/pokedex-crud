@@ -65,6 +65,8 @@
                         <% } else { %>
                             <p><b>Habilidade:</b> <%=pokemon.skills  %></p>
                         <% } %>
+                        <a href="/deletar/<%= pokemon.number %>" >EXCLUIR</a>
+                        <a href="/update/<%= pokemon.number %>" >EDITAR</a>              
                     </div>
             </section>
         </div>

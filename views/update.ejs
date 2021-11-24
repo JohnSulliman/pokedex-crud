@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Pokedéx/Cadastro</title>
+</head>
+
+<body>
+    <header class='head'>
+
+    </header>
+
+    <nav class='menu'>
+        <a href='/' class='menuHome' style='color: #E0E0E0;'>
+            <div>
+                <img src='img/pokeball2.png' width='30px' />
+                <p>INÍCIO</p>
+            </div>
+        </a>
+
+        <a href='/cadastro' class='menuRegister' style='background-color:#BC3232; border:3px solid #BC3232'>
+            <div>
+                <img src='img/pokeball1.png' width='30px' />
+                <p>Alterar</p>
+            </div>
+        </a>
+    </nav>
+
+    <main class='body'>
+        <div class='body-register'>
+            <h1>Alterar</h1>
+
+            
+
+            <form id='form' method='POST'>
+                <section class='register'>
+                    <h3>Informações Principais</h3>
+                    <div class='register-infos'>
+                        <div>
+                            <label for='name'>Nome: </label>
+                            <input class='input' name='name' value=<%= pokemon.name %> required />
+                        </div>
+                        <div>
+                            <label for='image'>Imagem: </label>
+                            <input class='input' placeholder='URL da imagem' name='image' value=<%= pokemon.image %> required />
+                        </div>
+                        <div>
+                            <label for='type1' >Tipo: </label>
+                            <select class='select' name='type1' required >
+                                <option value=<%= pokemon.type1 %>><%= pokemon.type1 %></option>
+                                <option value=''>Tipo primário</option>
+                                <option value='Inseto'>Inseto</option>
+                                <option value='Noturno'>Noturno</option>
+                                <option value='Dragão'>Dragão</option>
+                                <option value='Elétrico'>Elétrico</option>
+                                <option value='Fada'>Fada</option>
+                                <option value='Lutador'>Lutador</option>
+                                <option value='Fogo'>Fogo</option>
+                                <option value='Voador'>Voador</option>
+                                <option value='Fantasma'>Fantasma</option>
+                                <option value='Grama'>Grama</option>
+                                <option value='Terra'>Terra</option>
+                                <option value='Gelo'>Gelo</option>
+                                <option value='Normal'>Normal</option>
+                                <option value='Venenoso'>Venenoso</option>
+                                <option value='Psíquico'>Psíquico</option>
+                                <option value='Pedra'>Pedra</option>
+                                <option value='Aço'>Aço</option>
+                                <option value='Água'>Água</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for='type2'>Tipo: </label>
+                            <select class='select' name='type2'>
+                                <option value=<%= pokemon.type2 %>><%= pokemon.type2 %></option>
+                                <option value=''>Tipo secundário</option>
+                                <option value='Inseto'>Inseto</option>
+                                <option value='Noturno'>Noturno</option>
+                                <option value='Dragão'>Dragão</option>
+                                <option value='Elétrico'>Elétrico</option>
+                                <option value='Fada'>Fada</option>
+                                <option value='Lutador'>Lutador</option>
+                                <option value='Fogo'>Fogo</option>
+                                <option value='Voador'>Voador</option>
+                                <option value='Fantasma'>Fantasma</option>
+                                <option value='Grama'>Grama</option>
+                                <option value='Terra'>Terra</option>
+                                <option value='Gelo'>Gelo</option>
+                                <option value='Normal'>Normal</option>
+                                <option value='Venenoso'>Venenoso</option>
+                                <option value='Psíquico'>Psíquico</option>
+                                <option value='Pedra'>Pedra</option>
+                                <option value='Aço'>Aço</option>
+                                <option value='Água'>Água</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for='description'>Descrição: </label>
+                            <input class='input' name='description' value=<%= pokemon.description %> />
+                        </div>
+                        <div>
+                            <label for='number'>Número: </label>
+                            <input class='input' type='number' name='number' min='001' value=<%= pokemon.number %> required />
+                        </div>
+                    </div>
+                </section>
+
+                <section class='register'>
+                    <h3>Adicionais</h3>
+                    <div class='register-infos'>
+                        <div>
+                            <label for='height'>Altura: </label>
+                            <input class='input' type='number' name='height' step="0.01" min='0.01' value=<%= pokemon.height %> />
+                        </div>
+                        <div>
+                            <label for='weight'>Peso: </label>
+                            <input class='input' type='number' name='weight' step="0.01" min='0.01' value=<%= pokemon.weight %> />
+                        </div>
+                        <div>
+                            <label for='category'>Categoria: </label>
+                            <input class='input' name='category' value=<%= pokemon.category %> />
+                        </div>
+                        <div>
+                            <label for='sex'>Sexo: </label>
+                            <select class='select' name='sex' required >
+                                <option value=<%= pokemon.sex %>><%= pokemon.sex %></option>
+                                <option value=''>---</option>
+                                <option value='Masculino'>Masculino</option>
+                                <option value='Feminino'>Feminino</option>
+                                <option value='Indefinido'>Indefinido</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for='skills'>Habilidades: </label>
+                            <input class='input' name='skills' value=<%= pokemon.skills %> />
+                        </div>
+                        <div>
+                            <label for='strong'>Forte: </label>
+                            <select class='select' name='strong'>
+                                <option value=<%= pokemon.strong %>><%= pokemon.strong %></option>
+                                <option value=''>Tipo secundário</option>
+                                <option value='Inseto'>Inseto</option>
+                                <option value='Noturno'>Noturno</option>
+                                <option value='Dragão'>Dragão</option>
+                                <option value='Elétrico'>Elétrico</option>
+                                <option value='Fada'>Fada</option>
+                                <option value='Lutador'>Lutador</option>
+                                <option value='Fogo'>Fogo</option>
+                                <option value='Voador'>Voador</option>
+                                <option value='Fantasma'>Fantasma</option>
+                                <option value='Grama'>Grama</option>
+                                <option value='Terra'>Terra</option>
+                                <option value='Gelo'>Gelo</option>
+                                <option value='Normal'>Normal</option>
+                                <option value='Venenoso'>Venenoso</option>
+                                <option value='Psíquico'>Psíquico</option>
+                                <option value='Pedra'>Pedra</option>
+                                <option value='Aço'>Aço</option>
+                                <option value='Água'>Água</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for='weak'>Fraco: </label>
+                            <select class='select' name='weak'>
+                                <option value=<%= pokemon.weak %>><%= pokemon.weak %></option>
+                                <option value=''>Tipo secundário</option>
+                                <option value='Inseto'>Inseto</option>
+                                <option value='Noturno'>Noturno</option>
+                                <option value='Dragão'>Dragão</option>
+                                <option value='Elétrico'>Elétrico</option>
+                                <option value='Fada'>Fada</option>
+                                <option value='Lutador'>Lutador</option>
+                                <option value='Fogo'>Fogo</option>
+                                <option value='Voador'>Voador</option>
+                                <option value='Fantasma'>Fantasma</option>
+                                <option value='Grama'>Grama</option>
+                                <option value='Terra'>Terra</option>
+                                <option value='Gelo'>Gelo</option>
+                                <option value='Normal'>Normal</option>
+                                <option value='Venenoso'>Venenoso</option>
+                                <option value='Psíquico'>Psíquico</option>
+                                <option value='Pedra'>Pedra</option>
+                                <option value='Aço'>Aço</option>
+                                <option value='Água'>Água</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <div class='registerButton'>
+                    <button type='submit'>
+                        Alterar!
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <small>
+            ©2021 Pokémon. TM, ®Nintendo.
+        </small>
+    </footer>
+
+    <script src='/js/script.js'></script>
+
+</body>
+</html>

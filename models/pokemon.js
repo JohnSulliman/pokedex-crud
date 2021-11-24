@@ -6,11 +6,12 @@ const Pokemon = database.define("pokemons", {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         allowNull: false,
-        primaryKey: true,
+
     },
     number: {
         type: Sequelize.INTEGER,
         allowNull: false,
+        primaryKey: true,
     },
     name: {
         type: Sequelize.STRING,
@@ -50,7 +51,7 @@ const Pokemon = database.define("pokemons", {
     },
     type2: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     weak: {
         type: Sequelize.STRING,
