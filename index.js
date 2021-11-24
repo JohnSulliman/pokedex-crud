@@ -6,11 +6,13 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded());
 
-const Pokemon = require("./models/pokemon.js");
+const Pokemon = require('./models/pokemon.js');
+const Regions = require('./models/regions.js');
 
 app.get('/', async (req, res) => { 
   const pokemons = await Pokemon.findAll();
-    
+  console.log(pokemons)
+
   res.render('index', {
     pokemons,
   })
@@ -18,8 +20,11 @@ app.get('/', async (req, res) => {
 
 app.get('/cadastro', async (req, res) => {
   const pokemon = await Pokemon.findAll();
+  const region = await Regions.findAll();
 
-  res.render('register', pokemon)
+  res.render('register', {
+    pokemon, region
+  })
 });
 
 app.get('/update/:number', async (req, res) => {
@@ -107,10 +112,11 @@ app.post("/sent", async (req, res) => {
     height,
     weight,
     category,
-    abilities,
+    skills,
     weak,
     strong,
-    sex,  
+    sex,
+    regions_id,
   } = req.body;
 
   try {
@@ -124,10 +130,11 @@ app.post("/sent", async (req, res) => {
       height,
       weight,
       category,
-      abilities,
+      skills,
       weak,
       strong,
       sex,
+      regions_id,
     });
 
     res.redirect('/');
@@ -140,13 +147,19 @@ app.post("/sent", async (req, res) => {
   res.redirect('/');
 })
 
-app.get('/detalhes/:id', async (req, res) => {
-  const pokemon = await Pokemon.findByPk(req.params.id);
+app.get('/detalhes/:number', async (req, res) => {
+  const pokemon = await Pokemon.findByPk(req.params.number);
+  const region = await Regions.findAll({
+    where: {
+      id: pokemon.regions_id,
+    }
+  })
 
-  console.log(pokemon)
+  console.log(pokemon, region)
 
   res.render('infos', {
-    pokemon
+    pokemon,
+    region
   })
 });
 

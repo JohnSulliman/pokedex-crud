@@ -6,7 +6,6 @@ const Pokemon = database.define("pokemons", {
         type: Sequelize.INTEGER,
         autoIncrement: true,
         allowNull: false,
-
     },
     number: {
         type: Sequelize.INTEGER,
@@ -55,10 +54,14 @@ const Pokemon = database.define("pokemons", {
     },
     weak: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     strong: {
         type: Sequelize.STRING,
+        allowNull: true,
+    },
+    regions_id: {
+        type: Sequelize.INTEGER,
         allowNull: false,
     }
 },
