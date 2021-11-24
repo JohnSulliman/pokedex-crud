@@ -1,10 +1,10 @@
-// const home = document.querySelector(".menuHome")
-// const register = document.querySelector(".menuRegister")
+const closeMessage = document.querySelector("#close")
+const message = document.querySelector("#message")
 
-// home.addEventListener('click', function() {
+closeMessage.addEventListener("click", function (){
+    message.style.display = "none"
+})
 
-// })
-
-// register.addEventListener('click', function() {
-
-// })
+setTimeout(() => {
+    message.style.display = "none"
+}, 10000)

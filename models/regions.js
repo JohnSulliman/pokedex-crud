@@ -14,6 +14,12 @@ const Regions = database.define("regions", {
     region_image: {
         type: Sequelize.STRING,
         allowNull: false,
+    },
+    region_image_description: {
+        type: Sequelize.STRING,
+    },
+    region_description: {
+        type: Sequelize.STRING,
     }
 },
 {
