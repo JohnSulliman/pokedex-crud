@@ -410,3 +410,17 @@ a {
   border: 1px solid Black;
   border-radius: 5px;
 }
+
+/* ----------------------------------------------Scrollbar------------------------------------------------------- */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #383838;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #BC3232;
+}

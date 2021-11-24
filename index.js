@@ -12,14 +12,13 @@ let message = '';
 
 app.get('/', async (req, res) => { 
   const pokemons = await Pokemon.findAll();
-  console.log(pokemons)
 
   setTimeout(() => {
     message = "";
   }, 1000);
 
   res.render('index', {
-    pokemons,
+    pokemons: pokemons.sort((a ,b) => a.number - b.number),
     message
   })
 }); 
@@ -27,6 +26,14 @@ app.get('/', async (req, res) => {
 app.get('/cadastro', async (req, res) => {
   const pokemon = await Pokemon.findAll();
   const region = await Regions.findAll();
+
+  if (pokemon == '') {
+    res.render('register', {
+      pokemon: 'Pokémon não encontrado.',
+      region,
+      message,
+    });
+  }
 
   res.render('register', {
     pokemon, 
@@ -93,6 +100,11 @@ app.get('/editar/:number', async (req, res) => {
     }
   })
 
+  if (!pokemon) {
+    message = "Pokémon não encontrado.";
+    res.redirect("/");
+  }
+
   res.render('update', {
     pokemon,
     region,
@@ -102,11 +114,6 @@ app.get('/editar/:number', async (req, res) => {
 
 app.post('/editar/:number', async (req, res) => {
   const pokemon = await Pokemon.findByPk(req.params.number);
-  // const region = await Regions.findAll({
-  //   where: {
-  //     id: pokemon.regions_id,
-  //   }
-  // })
 
   const {
     number, 
@@ -153,7 +160,15 @@ app.post('/editar/:number', async (req, res) => {
 app.get("/deletar/:number", async (req, res) => {
   const pokemon = await Pokemon.findByPk(req.params.number);
 
-  res.render('deletar', pokemon)
+  console.log(pokemon)
+  if (!pokemon) {
+    message = "Pokémon não encontrado.";
+    res.redirect("/");
+  }
+
+  res.render('delete', {
+    pokemon
+  })
 });
 
 app.post('/deletar/:number', async (req, res) => {

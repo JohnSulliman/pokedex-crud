@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css" >
-    <title>Pokedéx/Detalhes</title>
+    <title>Pokedéx/Deletar</title>
 </head>
 
 <body>
     <header class='head'>
-      
+    
     </header>
 
     <nav class='menu'>
@@ -27,7 +27,8 @@
       <div class='body-delete'>
         <form method="POST">
           <div>
-            <h2>Quer mesmo excluir o pokémon da pokedex?</h2>
+            <h2>Quer mesmo excluir o pokémon <%= pokemon.name %> da pokedex?</h2>
+            <p>O pokémon deletado não poderá ser recuperado!</p>
           </div>
         
           <button class="deleteButton" type="submit">EXCLUIR!</button>
