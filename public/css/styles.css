@@ -83,7 +83,7 @@ a {
 }
 
 .body {
-  min-height: 75vh;
+  min-height: 73vh;
   display: flex;
   justify-content: center;
 }
@@ -117,6 +117,21 @@ a {
   background-color: rgba(255,255,255,0.8);
 }
 
+.body-delete {
+  width: 90%;
+  margin-top: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.body-delete button {
+  margin-top: 25px;
+}
+
 .infos {
   margin-top: 2rem;
   display: flex;
@@ -132,6 +147,23 @@ a {
 
 .infos2 {
   width: 50%;
+}
+
+.infos3  {
+  margin: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.infos3 img {
+  margin-top: 25px;
+  
+}
+
+.infos3-descriptionRegion {
+  margin-top: 25px;
 }
 
 .body-infos p {
@@ -165,7 +197,7 @@ a {
   margin: 5px;
 }
 
-.registerButton {
+.registerButton, .infoButtons {
   margin-top: 5rem;
   display: flex;
   flex-direction: column;
@@ -173,17 +205,73 @@ a {
 }
 
 .registerButton button{
-  background-color: #BC3232;
+  background-color: #00FF7F;
   padding: 0.5rem;
   border: 2px solid #383838;
-  color: #E0E0E0;
+  color: #383838;
   transition: .3s;
 }
 
 .registerButton button:hover {
   cursor: pointer;
-  background-color: #8d1d1d;
+  background-color: #00c060;
   transform: scale(1.05);
+}
+
+.editButton{
+  background-color: #FFD700;
+  padding: 0.5rem;
+  border: 2px solid #383838;
+  color: #383838;
+  transition: .3s;
+  width: 100px;
+  margin-bottom: 0.5rem;
+}
+
+.editButton:hover {
+  cursor: pointer;
+  background-color: #ceaf00;
+  transform: scale(1.05);
+}
+
+.deleteButton{
+  background-color: #cc3838;
+  padding: 0.5rem;
+  border: 2px solid #383838;
+  color: #383838;
+  transition: .3s;
+  width: 100px;
+}
+
+.deleteButton:hover {
+  cursor: pointer;
+  background-color: #a02a2a;
+  transform: scale(1.05);
+}
+/* ---------------------------------------------Mensagens------------------------------------------------------- */
+
+#message {
+  background-color: #00FF7F;
+  color: #231f20;
+  font-weight: bold;
+  padding: 1rem;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#close {
+  color: #231f20;
+  padding-left: 0.5rem;
+  font-size: 1.5rem;
+  transition: .3s;
+}
+
+#close:hover {
+  color: #cc3838;
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 /* -----------------------------------------------Tipos--------------------------------------------------------- */

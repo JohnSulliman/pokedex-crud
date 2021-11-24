@@ -11,7 +11,12 @@
 
 <body>
     <header class='head'>
-
+        <% if(message != "") {  %>
+            <section id="message">
+                <p><%= message %></p>
+                <span id="close">&times;</span>
+            </section>
+        <% }  %>
     </header>
 
     <nav class='menu'>
@@ -82,13 +87,33 @@
                     <% } %>
                 </div>
 
-                <div class='infos3'>
+            </section>
+            <div class='infos3'>
+                <% region.map (regions => { %>
+                    <h2>Região: <%= regions.region_name %></h2>
+                    <img src='<%= regions.region_image%>' alt='<%= regions.region_name %>' width='450rem' />
+                    <small>*<%=regions.region_image_description %></small>
+                <% }) %>
+                <div class='infos3-descriptionRegion'>
                     <% region.map (regions => { %>
-                        <h2><%= regions.region_name %></h2>
-                        <img src='<%= regions.region_image%>' alt='<%= regions.region_name %>' />
+                        <p><%=regions.region_description %></p>
                     <% }) %>
                 </div>
-            </section>
+            </div>
+
+            <div class='infoButtons'>
+                <a href='/editar/<%= pokemon.number %>'>
+                    <button class='editButton'>
+                        EDITAR
+                    </button>
+                </a>
+
+                <a href='/deletar/<%= pokemon.number %>'>
+                    <button class='deleteButton'>
+                        DELETAR
+                    </button>
+                </a>
+            </div>
         </div>
     </main>
 

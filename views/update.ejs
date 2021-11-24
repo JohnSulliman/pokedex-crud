@@ -11,21 +11,19 @@
 
 <body>
     <header class='head'>
-
+        <% if(message != "") {  %>
+            <section id="message">
+                <p><%= message %></p>
+                <span id="close">&times;</span>
+            </section>
+        <% }  %>
     </header>
 
     <nav class='menu'>
-        <a href='/' class='menuHome' style='color: #E0E0E0;'>
+        <a href='/detalhes/<%= pokemon.number %>' class='menuHome' style='color: #E0E0E0;'>
             <div>
-                <img src='img/pokeball2.png' width='30px' />
-                <p>INÍCIO</p>
-            </div>
-        </a>
-
-        <a href='/cadastro' class='menuRegister' style='background-color:#BC3232; border:3px solid #BC3232'>
-            <div>
-                <img src='img/pokeball1.png' width='30px' />
-                <p>Alterar</p>
+                <img src='../img/pokeball2.png' width='30px' />
+                <p>VOLTAR</p>
             </div>
         </a>
     </nav>
@@ -34,25 +32,23 @@
         <div class='body-register'>
             <h1>Alterar</h1>
 
-            
-
             <form id='form' method='POST'>
                 <section class='register'>
                     <h3>Informações Principais</h3>
                     <div class='register-infos'>
                         <div>
                             <label for='name'>Nome: </label>
-                            <input class='input' name='name' value=<%= pokemon.name %> required />
+                            <input class='input' name='name' value='<%= pokemon.name %>' required />
                         </div>
                         <div>
                             <label for='image'>Imagem: </label>
-                            <input class='input' placeholder='URL da imagem' name='image' value=<%= pokemon.image %> required />
+                            <input class='input' placeholder='URL da imagem' name='image' value='<%= pokemon.image %>' required />
                         </div>
                         <div>
                             <label for='type1' >Tipo: </label>
                             <select class='select' name='type1' required >
-                                <option value=<%= pokemon.type1 %>><%= pokemon.type1 %></option>
-                                <option value=''>Tipo primário</option>
+                                <option selected='<%= pokemon.type1 %>'><%= pokemon.type1 %></option>
+                                <option value=''>---</option>
                                 <option value='Inseto'>Inseto</option>
                                 <option value='Noturno'>Noturno</option>
                                 <option value='Dragão'>Dragão</option>
@@ -76,8 +72,8 @@
                         <div>
                             <label for='type2'>Tipo: </label>
                             <select class='select' name='type2'>
-                                <option value=<%= pokemon.type2 %>><%= pokemon.type2 %></option>
-                                <option value=''>Tipo secundário</option>
+                                <option selected='<%= pokemon.type2 %>'><%= pokemon.type2 %></option>
+                                <option value=''>---</option>
                                 <option value='Inseto'>Inseto</option>
                                 <option value='Noturno'>Noturno</option>
                                 <option value='Dragão'>Dragão</option>
@@ -100,11 +96,11 @@
                         </div>
                         <div>
                             <label for='description'>Descrição: </label>
-                            <input class='input' name='description' value=<%= pokemon.description %> />
+                            <input class='input' name='description' value='<%= pokemon.description%>' />
                         </div>
                         <div>
                             <label for='number'>Número: </label>
-                            <input class='input' type='number' name='number' min='001' value=<%= pokemon.number %> required />
+                            <input class='input' type='number' name='number' min='001' value='<%= pokemon.number %>' required />
                         </div>
                     </div>
                 </section>
@@ -114,20 +110,20 @@
                     <div class='register-infos'>
                         <div>
                             <label for='height'>Altura: </label>
-                            <input class='input' type='number' name='height' step="0.01" min='0.01' value=<%= pokemon.height %> />
+                            <input class='input' type='number' name='height' step="0.01" min='0.01' value='<%= pokemon.height %>' />
                         </div>
                         <div>
                             <label for='weight'>Peso: </label>
-                            <input class='input' type='number' name='weight' step="0.01" min='0.01' value=<%= pokemon.weight %> />
+                            <input class='input' type='number' name='weight' step="0.01" min='0.01' value='<%= pokemon.weight %>' />
                         </div>
                         <div>
                             <label for='category'>Categoria: </label>
-                            <input class='input' name='category' value=<%= pokemon.category %> />
+                            <input class='input' name='category' value='<%= pokemon.category %>' />
                         </div>
                         <div>
                             <label for='sex'>Sexo: </label>
                             <select class='select' name='sex' required >
-                                <option value=<%= pokemon.sex %>><%= pokemon.sex %></option>
+                                <option selected='<%= pokemon.sex %>'><%= pokemon.sex %></option>
                                 <option value=''>---</option>
                                 <option value='Masculino'>Masculino</option>
                                 <option value='Feminino'>Feminino</option>
@@ -136,13 +132,13 @@
                         </div>
                         <div>
                             <label for='skills'>Habilidades: </label>
-                            <input class='input' name='skills' value=<%= pokemon.skills %> />
+                            <input class='input' name='skills' value='<%= pokemon.skills %>' />
                         </div>
                         <div>
                             <label for='strong'>Forte: </label>
                             <select class='select' name='strong'>
-                                <option value=<%= pokemon.strong %>><%= pokemon.strong %></option>
-                                <option value=''>Tipo secundário</option>
+                                <option selected='<%= pokemon.strong %>'><%= pokemon.strong %></option>
+                                <option value=''>----</option>
                                 <option value='Inseto'>Inseto</option>
                                 <option value='Noturno'>Noturno</option>
                                 <option value='Dragão'>Dragão</option>
@@ -166,8 +162,8 @@
                         <div>
                             <label for='weak'>Fraco: </label>
                             <select class='select' name='weak'>
-                                <option value=<%= pokemon.weak %>><%= pokemon.weak %></option>
-                                <option value=''>Tipo secundário</option>
+                                <option selected='<%= pokemon.weak %>'><%= pokemon.weak %></option>
+                                <option value=''>---</option>
                                 <option value='Inseto'>Inseto</option>
                                 <option value='Noturno'>Noturno</option>
                                 <option value='Dragão'>Dragão</option>
@@ -188,12 +184,29 @@
                                 <option value='Água'>Água</option>
                             </select>
                         </div>
+                        <div>
+                            <label for='regions_id'>Região: </label>
+                            <select class='select' name='regions_id'>
+                                <% region.map (regions => { %>
+                                    <option selected='<%= pokemon.regions_id %>'><%= regions.region_name %></option>
+                                <% }) %>
+                                <option value=''>---</option>
+                                <option value='1'>Kanto</option>
+                                <option value='2'>Johto</option>
+                                <option value='3'>Hoenn</option>
+                                <option value='4'>Sinnoh</option>
+                                <option value='5'>Unova</option>
+                                <option value='6'>Kalos</option>
+                                <option value='7'>Região de Alola</option>
+                                <option value='8'>Região de Galar</option>
+                            </select>
+                        </div>
                     </div>
                 </section>
 
                 <div class='registerButton'>
                     <button type='submit'>
-                        Alterar!
+                        ATUALIZAR!
                     </button>
                 </div>
             </form>

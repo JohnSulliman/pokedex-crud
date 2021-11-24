@@ -6,17 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css" >
-    <title>Pokedéx</title>
+    <title>Pokedéx/Detalhes</title>
 </head>
+
 <body>
-    <main class="deletar">
+    <header class='head'>
+      
+    </header>
+
+    <nav class='menu'>
+        <a href='/' class='menuHome' style='color: #E0E0E0;'>
+            <div>
+                <img src='../img/pokeball2.png' width='30px' />
+                <p>CANCELAR</p>
+            </div>
+        </a>
+    </nav>
+
+    <main class='body'>
+      <div class='body-delete'>
         <form method="POST">
-          <div class="exclusao">
+          <div>
             <h2>Quer mesmo excluir o pokémon da pokedex?</h2>
           </div>
-  
-          <button class="excluir" type="submit">EXCLUIR</button>
+        
+          <button class="deleteButton" type="submit">EXCLUIR!</button>
         </form>
-      </main>
+      </div>
+    </main>
+
+    <footer>
+        <small>
+            ©2021 Pokémon. TM, ®Nintendo.
+        </small>
+    </footer>
+
+    <script src='/js/script.js'></script>
+
 </body>
 </html>

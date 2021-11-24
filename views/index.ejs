@@ -11,7 +11,12 @@
 
 <body>
     <header class='head'>
-
+        <% if(message != "") {  %>
+            <section id="message">
+                <p><%= message %></p>
+                <span id="close">&times;</span>
+            </section>
+        <% }  %>
     </header>
 
     <nav class='menu'>
@@ -37,7 +42,7 @@
                     <a href='/detalhes/<%= pokemon.number %>' >
                         <div class='card'>
                             <b>Nº <%= pokemon.number %></b>
-                            <img src='<%= pokemon.image %>' alt='pokemon-image'/>
+                            <img src='<%= pokemon.image %>' alt='pokemon-image' width='215px'/>
                             <b><%= pokemon.name %></b>
                             <% if(pokemon.type2 == '') { %>
                                 <p><b>Tipo</b>: <span id='<%=pokemon.type1 %>' ><%= pokemon.type1 %></span></p>
